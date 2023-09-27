@@ -46,4 +46,24 @@ public class UserController {
         // return userService.getAllUser();
     }
 
+    @PostMapping(path = "getSessionId")
+    public ResponseEntity<Object> getSessionId(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader){
+        //insert here for authentication from request header! value=authorization.
+        String param = "";
+        try{
+             param = utilityService.generateSessionId(authorization,ivHeader);
+
+             System.out.println(param);
+             return new ResponseEntity<Object>(utilityService.renderJsonResponse("200","Auth","sessionId",param),HttpStatus.OK);
+            //  if(!param.contains("@msugensan.edu.ph"))
+            //     throw new Exception("Unauthorize");
+            //  if(!obj.getBoolean("AdminUser"))
+            //     throw new Exception("Unauthorize");
+        }catch(Exception e){
+            System.out.println(e);
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+                HttpStatus.UNAUTHORIZED);
+        }
+        // return userService.getAllUser();
+    }
 }

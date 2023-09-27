@@ -11,13 +11,17 @@ import javax.crypto.spec.SecretKeySpec;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
+import com.spms.pcr.DataSource_PCR.model.Session;
+import com.spms.pcr.DataSource_PCR.repository.SessionRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -176,6 +180,24 @@ public class UtilityService {
         String decryptedData = new String(decryptedBytes);
 
         return (decryptedData);
+    }
+
+    @Autowired
+    private SessionRepository sessionRepository;
+    public String generateSessionId(String _data,String ivHeader) throws Exception{
+        String sessionId = "123456";
+        sessionId = RandomStringUtils.randomAlphanumeric(45);
+
+        String id = decryptDataAuth(_data, ivHeader);
+        JSONObject obj =  new JSONObject(id);
+
+        Session session = new Session();
+        session.setDate(new Date());
+        session.setEmail(obj.get("email").toString());
+        session.setSessionId(sessionId);
+        sessionRepository.save(session);
+
+        return sessionId;
     }
 
     public Date getDate(Object value){
