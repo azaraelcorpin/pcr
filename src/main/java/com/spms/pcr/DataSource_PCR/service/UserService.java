@@ -30,10 +30,11 @@ public class UserService {
     @Transactional("PcrTransactionManager")
     public ResponseEntity<Object> newUser(@RequestBody Map<String,Object> params){
         try{
-            String email = params.get("email").toString();
-            String userName = params.get("userName").toString();
-            String userType = params.get("userType").toString();
+            String email = utilityService.getString("email", params);
+            String userName = utilityService.getString("userName", params);
+            String userType = utilityService.getString("userType", params);
             int office_id = utilityService.toInteger(params.get("officeId").toString());
+            String privileges = utilityService.getString("privileges", params);
             Optional<User> optionalUser = userRepository.findByEmail(email);
             User user = optionalUser.orElse(null);
             if(user != null){
@@ -46,6 +47,7 @@ public class UserService {
                 user.setUserType(userType);
                 user.setOfficeId(office_id);
                 user.setStatus(User.STATUS_ACTIVE);
+                user.setPrivileges(privileges);
                 userRepository.save(user);
                 return new ResponseEntity<Object>(utilityService.renderJsonResponse("200", "Success"),
                 HttpStatus.OK);
@@ -68,4 +70,6 @@ public class UserService {
             return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+  
 }

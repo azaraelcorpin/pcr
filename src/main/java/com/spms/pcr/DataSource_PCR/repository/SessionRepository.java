@@ -14,4 +14,6 @@ public interface SessionRepository extends JpaRepository<Session, String> {
     List<Session> findAll();
 
     Optional<Session> findBySessionId(String sessionId);
+
+    Optional<Session> findBySessionIdAndEmail(String sessionId, String email);
 }

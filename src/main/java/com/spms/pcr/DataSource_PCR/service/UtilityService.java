@@ -3,6 +3,7 @@ package com.spms.pcr.DataSource_PCR.service;
 import java.util.Base64;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -148,6 +149,9 @@ public class UtilityService {
         return value!=null?value.toString().replace(" ", "").isEmpty()?null:value.toString():null;
     }
 
+    public String getString(String key, Map<String, Object> param){
+        return getString(param.get(key));
+    }
     public Integer toInteger(String value){
         return value!=null?value.isEmpty()?null:(Integer.parseInt(value)):null;
     }
@@ -191,13 +195,46 @@ public class UtilityService {
         String id = decryptDataAuth(_data, ivHeader);
         JSONObject obj =  new JSONObject(id);
 
+        if(!id.contains("@msugensan.edu.ph"))
+                throw new Exception("Unauthorize");
+
         Session session = new Session();
         session.setDate(new Date());
-        session.setEmail(obj.get("email").toString());
+        session.setEmail(obj.get("userEmail").toString());
         session.setSessionId(sessionId);
+
+        /*
+        Put condition here that filter if the user is exist in the user Table or
+        the user has record on pre_assessment table
+        ....>
+            if(!userRepository.findByEmail(userEmail).ispresent())
+                throw -> Unauthorized
+            if(!preAssessmentReporitory.findByEmail(userEmail).ispresent())
+                throw -> Unauthorized
+        */
+
         sessionRepository.save(session);
 
         return sessionId;
+    }
+
+    public JSONObject validateSession(String _data,String ivHeader) throws Exception{
+        String param = decryptDataAuth(_data, ivHeader);
+
+            if(!param.contains("@msugensan.edu.ph"))
+                throw new Exception("Unauthorize");
+        
+            JSONObject obj =  new JSONObject(param);
+            if(!obj.has("sid"))
+                throw new Exception("Unauthorize");
+
+            if(obj.getString("sid").equalsIgnoreCase("hash"))
+                return obj;
+            
+            if(!sessionRepository.findBySessionIdAndEmail(obj.getString("sid"), obj.getString("userEmail")).isPresent())
+                throw new Exception("Unauthorize");            
+
+        return obj;
     }
 
     public Date getDate(Object value){

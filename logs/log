@@ -1,67 +1,761 @@
-2023-09-27 10:41:21.370  INFO 4480 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on DESKTOP-SGQP2J6 with PID 4480 (C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr\target\classes started by SHEM-ICTO in C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr)
-2023-09-27 10:41:21.386  INFO 4480 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-09-27 10:41:22.143  INFO 4480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-27 10:41:22.143  INFO 4480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-27 10:41:27.412  INFO 4480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-09-27 10:41:27.412  INFO 4480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-27 10:41:27.760  INFO 4480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 266 ms. Found 1 JPA repository interfaces.
-2023-09-27 10:41:29.331  INFO 4480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-09-27 10:41:29.347  INFO 4480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2023-09-27 10:41:29.381  INFO 4480 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-09-27 10:41:29.385  INFO 4480 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 0 JDBC repository interfaces.
-2023-09-27 10:41:36.055  INFO 4480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-09-27 10:41:36.182  INFO 4480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-09-27 10:41:36.197  INFO 4480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-09-27 10:41:36.943  INFO 4480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-09-27 10:41:36.951  INFO 4480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14794 ms
-2023-09-27 10:41:38.375  INFO 4480 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-27 10:41:39.609  INFO 4480 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-09-27 10:41:42.539  INFO 4480 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-27 10:41:45.540  INFO 4480 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-09-27 10:41:48.743  INFO 4480 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-27 10:41:48.765  INFO 4480 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-27 10:41:50.458  WARN 4480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-27 10:41:52.652  INFO 4480 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-09-27 10:41:53.018  INFO 4480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-09-27 10:41:53.703  INFO 4480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-27 10:41:53.711  INFO 4480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-09-27 10:41:53.763  INFO 4480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-09-27 10:41:53.862  INFO 4480 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-09-27 10:41:54.217  INFO 4480 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 35.848 seconds (JVM running for 40.166)
-2023-09-27 10:41:54.257  INFO 4480 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
-2023-09-27 10:41:54.257 ERROR 4480 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
-2023-09-27 10:43:49.435  INFO 4480 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-09-27 10:43:49.435  INFO 4480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-09-27 10:43:49.435  INFO 4480 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2023-09-27 13:05:31.501  INFO 12304 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on DESKTOP-SGQP2J6 with PID 12304 (C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr\target\classes started by SHEM-ICTO in C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr)
-2023-09-27 13:05:31.504  INFO 12304 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-09-27 13:05:31.581  INFO 12304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-09-27 13:05:31.586  INFO 12304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-09-27 13:05:32.460  INFO 12304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-09-27 13:05:32.461  INFO 12304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-09-27 13:05:32.523  INFO 12304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
-2023-09-27 13:05:32.747  INFO 12304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-09-27 13:05:32.748  INFO 12304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2023-09-27 13:05:32.756  INFO 12304 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2023-09-27 13:05:32.757  INFO 12304 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
-2023-09-27 13:05:33.449  INFO 12304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-09-27 13:05:33.459  INFO 12304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-09-27 13:05:33.461  INFO 12304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-09-27 13:05:33.616  INFO 12304 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-09-27 13:05:33.617  INFO 12304 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2028 ms
-2023-09-27 13:05:33.779  INFO 12304 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-09-27 13:05:33.850  INFO 12304 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
-2023-09-27 13:05:34.071  INFO 12304 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2023-09-27 13:05:34.767  INFO 12304 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-09-27 13:05:35.448  INFO 12304 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-09-27 13:05:35.474  INFO 12304 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-09-27 13:05:36.117  WARN 12304 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-09-27 13:05:36.306  INFO 12304 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2023-09-27 13:05:36.470  INFO 12304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-09-27 13:05:36.978  INFO 12304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-09-27 13:05:36.979  INFO 12304 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2023-09-27 13:05:37.001  INFO 12304 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2023-09-27 13:05:37.037  INFO 12304 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2023-09-27 13:05:37.211  INFO 12304 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 6.179 seconds (JVM running for 7.307)
-2023-09-27 13:05:37.215  INFO 12304 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
-2023-09-27 13:05:37.216 ERROR 12304 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 09:31:47.585  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 09:31:47.592  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 09:31:47.661  INFO 14100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-09-29 09:31:47.661  INFO 14100 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-09-29 09:31:48.459  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 09:31:48.460  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 09:31:48.544  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2023-09-29 09:31:48.820  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 09:31:48.820  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 09:31:48.830  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 09:31:48.830  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 09:31:48.835  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2023-09-29 09:31:49.625  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 09:31:49.636  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 09:31:49.636  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 09:31:49.761  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 09:31:49.761  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2099 ms
+2023-09-29 09:31:49.965  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 09:31:50.067  INFO 14100 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2023-09-29 09:31:50.370  INFO 14100 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-29 09:31:50.955  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 09:31:51.931  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 09:31:51.942  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 09:31:52.680  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 09:31:52.881  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 09:31:53.080  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 09:31:53.456  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 09:31:53.456  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 09:31:53.478  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 09:31:53.517  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 09:31:53.730  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 6.907 seconds (JVM running for 7.916)
+2023-09-29 09:31:53.735  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 09:31:53.740 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 09:35:11.121  INFO 14100 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 09:35:11.121  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 09:35:11.121  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 09:48:21.029  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 09:48:21.053  INFO 14100 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 09:48:21.053  INFO 14100 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 09:48:21.073  INFO 14100 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 09:48:21.190  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 09:48:21.190  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 09:48:21.434  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 09:48:21.434  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 09:48:21.441  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-09-29 09:48:21.521  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 09:48:21.521  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 09:48:21.521  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 09:48:21.521  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 09:48:21.521  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-09-29 09:48:21.741  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 09:48:21.741  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 09:48:21.741  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 09:48:21.783  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 09:48:21.785  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 589 ms
+2023-09-29 09:48:21.824  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 09:48:21.880  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 09:48:21.944  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 09:48:21.944  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 09:48:22.166  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 09:48:22.225  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 09:48:22.295  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 09:48:22.400  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 09:48:22.401  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 09:48:22.403  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 09:48:22.405  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 09:48:22.489  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 1.345 seconds (JVM running for 996.672)
+2023-09-29 09:48:22.491  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 09:48:22.491  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 09:48:22.491 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 09:52:26.461  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 09:52:26.469  INFO 14100 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 09:52:26.476  INFO 14100 --- [Thread-8] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 09:52:26.560  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 09:52:26.561  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 09:52:26.899  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 09:52:26.900  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 09:52:26.909  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2023-09-29 09:52:26.976  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 09:52:26.977  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 09:52:26.979  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 09:52:26.981  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 09:52:26.982  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-09-29 09:52:27.099  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 09:52:27.101  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 09:52:27.102  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 09:52:27.119  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 09:52:27.120  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 555 ms
+2023-09-29 09:52:27.153  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 09:52:27.197  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 09:52:27.242  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 09:52:27.243  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 09:52:27.430  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 09:52:27.481  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 09:52:27.544  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 09:52:27.665  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 09:52:27.667  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 09:52:27.669  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 09:52:27.673  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 09:52:27.780  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 1.254 seconds (JVM running for 1241.963)
+2023-09-29 09:52:27.782  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 09:52:27.783  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 09:52:27.783 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:01:55.658  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:01:55.672  INFO 14100 --- [Thread-13] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:01:55.685  INFO 14100 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:01:55.801  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:01:55.801  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:01:56.041  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:01:56.041  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:01:56.046  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:01:56.103  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:01:56.103  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:01:56.111  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:01:56.111  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:01:56.111  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:01:56.210  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:01:56.210  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:01:56.210  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:01:56.236  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:01:56.236  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 431 ms
+2023-09-29 10:01:56.267  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:01:56.300  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:01:56.343  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:01:56.343  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:01:56.476  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:01:56.507  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:01:56.557  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:01:56.646  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:01:56.649  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:01:56.651  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:01:56.652  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:01:56.741  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.97 seconds (JVM running for 1810.924)
+2023-09-29 10:01:56.744  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:01:56.744  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:01:56.744 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:01:59.361  INFO 14100 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:01:59.361  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:01:59.361  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:02:14.431  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:02:14.461  INFO 14100 --- [Thread-18] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:02:14.461  INFO 14100 --- [Thread-18] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:02:14.475  INFO 14100 --- [Thread-18] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:02:14.568  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:02:14.571  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:02:14.849  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:02:14.850  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:02:14.857  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:02:14.911  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:02:14.911  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:02:14.916  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:02:14.916  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:02:14.918  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:02:15.051  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:02:15.051  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:02:15.053  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:02:15.082  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:02:15.083  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 510 ms
+2023-09-29 10:02:15.111  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:02:15.150  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:02:15.185  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:02:15.191  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:02:15.332  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:02:15.364  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:02:15.411  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:02:15.510  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:02:15.510  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:02:15.510  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:02:15.510  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:02:15.561  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 1.02 seconds (JVM running for 1829.743)
+2023-09-29 10:02:15.561  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:02:15.561  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:02:15.566 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:02:16.352  INFO 14100 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:02:16.352  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:02:16.352  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:02:28.161  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:02:28.197  INFO 14100 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:02:28.197  INFO 14100 --- [Thread-23] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:02:28.207  INFO 14100 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:02:28.303  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:02:28.303  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:02:28.531  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:02:28.531  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:02:28.541  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:02:28.606  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:02:28.606  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:02:28.611  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:02:28.613  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:02:28.614  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:02:28.736  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:02:28.738  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:02:28.739  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:02:28.764  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:02:28.764  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 461 ms
+2023-09-29 10:02:28.785  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:02:28.822  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:02:28.861  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:02:28.863  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:02:29.018  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:02:29.061  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:02:29.121  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:02:29.214  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:02:29.214  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:02:29.214  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:02:29.214  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:02:29.263  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.99 seconds (JVM running for 1843.45)
+2023-09-29 10:02:29.268  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:02:29.271  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:02:29.271 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:02:29.963  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:02:29.963  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:02:29.971  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:04:08.382  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:04:08.391  INFO 14100 --- [Thread-28] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:04:08.391  INFO 14100 --- [Thread-28] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:04:08.396  INFO 14100 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:04:08.482  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:04:08.482  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:04:08.726  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:04:08.729  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:04:08.742  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:04:08.815  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:04:08.815  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:04:08.816  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:04:08.821  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:04:08.821  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:04:08.931  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:04:08.935  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:04:08.935  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:04:08.952  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:04:08.952  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 470 ms
+2023-09-29 10:04:08.971  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:04:09.011  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:04:09.046  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:04:09.046  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:04:09.171  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:04:09.204  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:04:09.244  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:04:09.354  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:04:09.357  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:04:09.358  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:04:09.361  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:04:09.447  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.99 seconds (JVM running for 1943.631)
+2023-09-29 10:04:09.451  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:04:09.451  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:04:09.451 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:04:11.151  INFO 14100 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:04:11.151  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:04:11.151  INFO 14100 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:07:16.175  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:07:16.191  INFO 14100 --- [Thread-33] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:07:16.196  INFO 14100 --- [Thread-33] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:07:16.201  INFO 14100 --- [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:07:16.297  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:07:16.301  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:07:16.521  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:07:16.521  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:07:16.530  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:07:16.576  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:07:16.576  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:07:16.582  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:07:16.584  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:07:16.584  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:07:16.681  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:07:16.682  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:07:16.682  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:07:16.705  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:07:16.705  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 404 ms
+2023-09-29 10:07:16.726  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:07:16.761  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:07:16.801  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:07:16.801  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:07:16.945  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:07:16.981  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:07:17.023  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:07:17.115  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:07:17.116  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:07:17.116  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:07:17.121  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:07:17.173  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.901 seconds (JVM running for 2131.361)
+2023-09-29 10:07:17.173  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:07:17.173  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:07:17.180 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:08:12.446  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:08:12.463  INFO 14100 --- [Thread-38] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:08:12.469  INFO 14100 --- [Thread-38] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:08:12.571  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:08:12.572  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:08:12.740  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:08:12.741  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:08:12.748  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:08:12.776  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:08:12.777  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:08:12.779  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:08:12.780  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:08:12.781  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:08:12.868  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:08:12.870  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:08:12.871  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:08:12.890  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:08:12.891  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 317 ms
+2023-09-29 10:08:12.917  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:08:12.945  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:08:12.978  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:08:12.980  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:08:13.095  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:08:13.122  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:08:13.173  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:08:13.252  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:08:13.253  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:08:13.254  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:08:13.257  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:08:13.296  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.749 seconds (JVM running for 2187.479)
+2023-09-29 10:08:13.299  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:08:13.300  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:08:13.301 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:08:14.353  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:08:14.354  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:08:14.356  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-29 10:11:40.882  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:11:40.898  INFO 14100 --- [Thread-43] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:11:40.899  INFO 14100 --- [Thread-43] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:11:40.906  INFO 14100 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:11:41.006  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:11:41.007  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:11:41.187  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:11:41.187  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:11:41.195  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:11:41.235  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:11:41.236  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:11:41.240  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:11:41.241  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:11:41.241  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:11:41.313  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:11:41.314  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:11:41.314  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:11:41.336  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:11:41.337  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 328 ms
+2023-09-29 10:11:41.349  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:11:41.377  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:11:41.410  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:11:41.412  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:11:41.518  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:11:41.536  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:11:41.578  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:11:41.654  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:11:41.654  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:11:41.655  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:11:41.657  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:11:41.695  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.718 seconds (JVM running for 2395.878)
+2023-09-29 10:11:41.697  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:11:41.697  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:11:41.698 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:11:44.382  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:11:44.382  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:11:44.383  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:12:10.414  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:12:10.431  INFO 14100 --- [Thread-48] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:12:10.432  INFO 14100 --- [Thread-48] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:12:10.438  INFO 14100 --- [Thread-48] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:12:10.540  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:12:10.541  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:12:10.691  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:12:10.691  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:12:10.699  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:12:10.731  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:12:10.732  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:12:10.734  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:12:10.736  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:12:10.738  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:12:10.807  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:12:10.809  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:12:10.809  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:12:10.826  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:12:10.826  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 283 ms
+2023-09-29 10:12:10.838  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:12:10.863  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:12:10.892  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:12:10.893  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:12:10.995  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:12:11.017  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:12:11.057  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:12:11.143  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:12:11.145  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:12:11.145  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:12:11.149  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:12:11.196  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.685 seconds (JVM running for 2425.379)
+2023-09-29 10:12:11.201  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:12:11.202  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:12:11.204 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:12:13.552  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:12:13.554  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:12:13.556  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-29 10:12:23.741  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:12:23.769  INFO 14100 --- [Thread-53] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:12:23.771  INFO 14100 --- [Thread-53] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:12:23.782  INFO 14100 --- [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:12:23.870  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:12:23.871  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:12:24.016  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:12:24.016  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:12:24.022  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:12:24.051  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:12:24.051  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:12:24.053  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:12:24.053  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:12:24.053  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:12:24.131  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:12:24.131  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:12:24.131  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:12:24.151  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:12:24.151  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 280 ms
+2023-09-29 10:12:24.164  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:12:24.191  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:12:24.223  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:12:24.231  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:12:24.321  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:12:24.341  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:12:24.371  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:12:24.470  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:12:24.470  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:12:24.470  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:12:24.470  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:12:24.512  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.659 seconds (JVM running for 2438.695)
+2023-09-29 10:12:24.512  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:12:24.512  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:12:24.512 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:12:25.231  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:12:25.233  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:12:25.234  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-29 10:23:48.099  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:23:48.112  INFO 14100 --- [Thread-58] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:23:48.114  INFO 14100 --- [Thread-58] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:23:48.120  INFO 14100 --- [Thread-58] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:23:48.209  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:23:48.210  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:23:48.335  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:23:48.335  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:23:48.343  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:23:48.364  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:23:48.365  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:23:48.366  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:23:48.367  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:23:48.368  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:23:48.445  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:23:48.446  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:23:48.446  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:23:48.465  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:23:48.465  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 253 ms
+2023-09-29 10:23:48.483  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:23:48.511  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:23:48.542  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:23:48.543  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:23:48.657  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:23:48.679  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:23:48.716  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:23:48.794  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:23:48.795  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:23:48.796  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:23:48.799  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:23:48.842  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.652 seconds (JVM running for 3123.025)
+2023-09-29 10:23:48.844  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:23:48.845  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:23:48.846 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:23:56.738  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:23:56.739  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:23:56.741  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:29:06.063  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:29:06.074  INFO 14100 --- [Thread-63] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:29:06.075  INFO 14100 --- [Thread-63] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:29:06.079  INFO 14100 --- [Thread-63] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:29:06.170  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:29:06.170  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:29:06.308  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:29:06.308  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:29:06.311  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:29:06.350  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:29:06.350  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:29:06.350  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:29:06.350  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:29:06.355  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:29:06.420  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:29:06.420  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:29:06.420  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:29:06.440  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:29:06.440  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 265 ms
+2023-09-29 10:29:06.462  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:29:06.497  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:29:06.533  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:29:06.533  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:29:06.621  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:29:06.645  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:29:06.677  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:29:06.740  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:29:06.740  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:29:06.740  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:29:06.745  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:29:06.776  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.624 seconds (JVM running for 3440.959)
+2023-09-29 10:29:06.778  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:29:06.778  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:29:06.781 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:29:11.827  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:29:11.827  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:29:11.831  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-09-29 10:30:12.358  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:30:12.371  INFO 14100 --- [Thread-68] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:30:12.372  INFO 14100 --- [Thread-68] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:30:12.378  INFO 14100 --- [Thread-68] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:30:12.481  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:30:12.481  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:30:12.615  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:30:12.615  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:30:12.620  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:30:12.656  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:30:12.656  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:30:12.660  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:30:12.662  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:30:12.663  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:30:12.715  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:30:12.721  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:30:12.721  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:30:12.740  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:30:12.740  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 254 ms
+2023-09-29 10:30:12.750  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:30:12.775  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:30:12.808  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:30:12.808  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:30:12.894  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:30:12.912  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:30:12.941  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:30:13.000  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:30:13.000  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:30:13.004  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:30:13.008  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:30:13.040  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.579 seconds (JVM running for 3507.225)
+2023-09-29 10:30:13.040  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:30:13.040  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:30:13.045 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:30:34.841  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:30:34.882  INFO 14100 --- [Thread-73] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:30:34.891  INFO 14100 --- [Thread-73] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:30:34.991  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:30:35.000  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:30:35.141  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:30:35.146  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:30:35.151  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:30:35.176  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:30:35.176  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:30:35.176  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:30:35.181  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:30:35.181  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:30:35.272  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:30:35.272  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:30:35.272  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:30:35.289  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:30:35.291  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 291 ms
+2023-09-29 10:30:35.304  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:30:35.332  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:30:35.366  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:30:35.366  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:30:35.479  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:30:35.501  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:30:35.556  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:30:35.641  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:30:35.641  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:30:35.641  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:30:35.641  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:30:35.681  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.703 seconds (JVM running for 3529.865)
+2023-09-29 10:30:35.681  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:30:35.685  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:30:35.686 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:30:35.689  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:30:35.690  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:30:35.690  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:30:59.562  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:30:59.571  INFO 14100 --- [Thread-78] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:30:59.571  INFO 14100 --- [Thread-78] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:30:59.576  INFO 14100 --- [Thread-78] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:30:59.671  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:30:59.671  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:30:59.863  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:30:59.863  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:30:59.872  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:30:59.912  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:30:59.912  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:30:59.914  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:30:59.914  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:30:59.914  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:30:59.981  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:30:59.981  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:30:59.981  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:31:00.012  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:31:00.012  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 341 ms
+2023-09-29 10:31:00.028  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:31:00.051  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:31:00.073  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:31:00.073  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:31:00.150  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:31:00.173  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:31:00.216  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:31:00.273  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:31:00.277  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:31:00.277  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:31:00.281  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:31:00.301  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.646 seconds (JVM running for 3554.485)
+2023-09-29 10:31:00.301  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:31:00.301  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:31:00.301 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:31:01.901  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:31:01.901  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:31:01.901  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:31:16.931  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:31:16.943  INFO 14100 --- [Thread-83] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:31:16.943  INFO 14100 --- [Thread-83] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:31:16.951  INFO 14100 --- [Thread-83] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:31:17.057  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:31:17.057  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:31:17.230  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:31:17.230  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:31:17.235  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:31:17.271  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:31:17.271  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:31:17.271  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:31:17.271  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:31:17.271  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:31:17.326  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:31:17.326  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:31:17.326  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:31:17.351  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:31:17.351  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 290 ms
+2023-09-29 10:31:17.371  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:31:17.384  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:31:17.423  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:31:17.423  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:31:17.511  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:31:17.531  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:31:17.566  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:31:17.622  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:31:17.622  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:31:17.622  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:31:17.631  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:31:17.661  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.626 seconds (JVM running for 3571.848)
+2023-09-29 10:31:17.661  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:31:17.668  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:31:17.668 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:31:19.106  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:31:19.109  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:31:19.111  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-29 10:31:57.764  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:31:57.770  INFO 14100 --- [Thread-88] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:31:57.770  INFO 14100 --- [Thread-88] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:31:57.781  INFO 14100 --- [Thread-88] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:31:57.871  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:31:57.871  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:31:58.005  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:31:58.005  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:31:58.011  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:31:58.046  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:31:58.046  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:31:58.050  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:31:58.050  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:31:58.053  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:31:58.131  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:31:58.131  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:31:58.136  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:31:58.153  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:31:58.153  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 277 ms
+2023-09-29 10:31:58.175  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:31:58.191  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:31:58.225  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:31:58.225  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:31:58.311  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:31:58.325  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:31:58.353  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:31:58.443  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:31:58.446  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:31:58.446  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:31:58.451  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:31:58.496  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.643 seconds (JVM running for 3612.68)
+2023-09-29 10:31:58.496  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:31:58.496  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:31:58.501 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:31:59.865  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:31:59.865  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:31:59.865  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:32:49.865  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:32:49.896  INFO 14100 --- [Thread-93] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:32:49.896  INFO 14100 --- [Thread-93] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:32:49.901  INFO 14100 --- [Thread-93] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:32:50.023  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:32:50.031  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:32:50.157  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:32:50.157  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:32:50.161  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:32:50.184  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:32:50.184  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:32:50.184  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:32:50.188  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:32:50.189  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:32:50.254  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:32:50.254  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:32:50.254  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:32:50.272  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:32:50.272  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 241 ms
+2023-09-29 10:32:50.294  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:32:50.313  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:32:50.343  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:32:50.343  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:32:50.422  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:32:50.432  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:32:50.453  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:32:50.491  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:32:50.491  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:32:50.491  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:32:50.491  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:32:50.514  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.506 seconds (JVM running for 3664.701)
+2023-09-29 10:32:50.520  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:32:50.522  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:32:50.522 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:32:53.931  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:32:53.931  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:32:53.931  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-29 10:33:52.037  INFO 14100 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-09-29 10:33:52.049  INFO 14100 --- [Thread-98] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-29 10:33:52.050  INFO 14100 --- [Thread-98] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-29 10:33:52.057  INFO 14100 --- [Thread-98] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:33:52.144  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.8.1 on hashem with PID 14100 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-29 10:33:52.145  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-29 10:33:52.278  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:33:52.279  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-29 10:33:52.285  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
+2023-09-29 10:33:52.309  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-29 10:33:52.310  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-29 10:33:52.312  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:33:52.313  INFO 14100 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-29 10:33:52.314  INFO 14100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2023-09-29 10:33:52.365  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-29 10:33:52.366  INFO 14100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-29 10:33:52.366  INFO 14100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-29 10:33:52.385  INFO 14100 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-29 10:33:52.386  INFO 14100 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 240 ms
+2023-09-29 10:33:52.404  INFO 14100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-29 10:33:52.429  INFO 14100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-29 10:33:52.458  INFO 14100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-29 10:33:52.459  INFO 14100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-29 10:33:52.578  WARN 14100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-29 10:33:52.615  INFO 14100 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-29 10:33:52.648  INFO 14100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-29 10:33:52.695  INFO 14100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-29 10:33:52.696  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-29 10:33:52.697  INFO 14100 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-29 10:33:52.702  INFO 14100 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-29 10:33:52.722  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.594 seconds (JVM running for 3726.905)
+2023-09-29 10:33:52.723  INFO 14100 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-29 10:33:52.724  INFO 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-29 10:33:52.724 ERROR 14100 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message
+2023-09-29 10:33:56.309  INFO 14100 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-29 10:33:56.310  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-29 10:33:56.312  INFO 14100 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-29 16:30:34.980  INFO 14100 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
