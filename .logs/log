@@ -1,66 +1,31 @@
-2023-08-07T12:29:19.797+08:00  INFO 11052 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.7 with PID 11052 (C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr\target\classes started by SHEM-ICTO in C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr)
-2023-08-07T12:29:19.802+08:00  INFO 11052 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-08-07T12:29:19.864+08:00  INFO 11052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-08-07T12:29:19.864+08:00  INFO 11052 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-08-07T12:29:24.180+08:00  INFO 11052 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-07T12:29:24.398+08:00  INFO 11052 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-07T12:29:24.399+08:00  INFO 11052 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
-2023-08-07T12:29:25.073+08:00  INFO 11052 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-07T12:29:25.074+08:00  INFO 11052 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5209 ms
-2023-08-07T12:29:26.070+08:00  WARN 11052 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-2023-08-07T12:29:26.146+08:00  INFO 11052 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-08-07T12:29:26.171+08:00  INFO 11052 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-08-07T12:29:26.201+08:00 ERROR 11052 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
-
-2023-08-07T12:31:03.929+08:00  INFO 1236 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.7 with PID 1236 (C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr\target\classes started by SHEM-ICTO in C:\Users\SHEM-ICTO\Documents\dev PROJECTS\SPMS\pcr)
-2023-08-07T12:31:03.933+08:00  INFO 1236 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
-2023-08-07T12:31:04.016+08:00  INFO 1236 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-08-07T12:31:04.017+08:00  INFO 1236 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-08-07T12:31:05.586+08:00  INFO 1236 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-08-07T12:31:05.604+08:00  INFO 1236 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-08-07T12:31:05.606+08:00  INFO 1236 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
-2023-08-07T12:31:05.704+08:00  INFO 1236 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-08-07T12:31:05.709+08:00  INFO 1236 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1689 ms
-2023-08-07T12:31:06.360+08:00  WARN 1236 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-2023-08-07T12:31:06.367+08:00  INFO 1236 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2023-08-07T12:31:06.398+08:00  INFO 1236 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2023-08-07T12:31:06.435+08:00 ERROR 1236 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
-
+2023-09-30 15:12:41.616  INFO 14148 --- [restartedMain] com.spms.pcr.PcrApplication              : Starting PcrApplication using Java 17.0.4 on hashem with PID 14148 (D:\spms\pcr\target\classes started by azara in D:\spms\pcr)
+2023-09-30 15:12:41.618  INFO 14148 --- [restartedMain] com.spms.pcr.PcrApplication              : No active profile set, falling back to 1 default profile: "default"
+2023-09-30 15:12:41.762  INFO 14148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-30 15:12:41.763  INFO 14148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-30 15:12:41.770  INFO 14148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2023-09-30 15:12:41.806  INFO 14148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-30 15:12:41.807  INFO 14148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-09-30 15:12:41.809  INFO 14148 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.OfficeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-30 15:12:41.810  INFO 14148 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.SessionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-30 15:12:41.812  INFO 14148 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.spms.pcr.DataSource_PCR.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-09-30 15:12:41.813  INFO 14148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2023-09-30 15:12:41.893  INFO 14148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2023-09-30 15:12:41.895  INFO 14148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-30 15:12:41.896  INFO 14148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-09-30 15:12:41.918  INFO 14148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-30 15:12:41.918  INFO 14148 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 297 ms
+2023-09-30 15:12:41.949  INFO 14148 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-30 15:12:41.986  INFO 14148 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-09-30 15:12:42.024  INFO 14148 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-30 15:12:42.024  INFO 14148 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-30 15:12:42.130  WARN 14148 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-30 15:12:42.145  INFO 14148 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-09-30 15:12:42.173  INFO 14148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-09-30 15:12:42.225  INFO 14148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-30 15:12:42.226  INFO 14148 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-09-30 15:12:42.227  INFO 14148 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-09-30 15:12:42.230  INFO 14148 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-09-30 15:12:42.259  INFO 14148 --- [restartedMain] com.spms.pcr.PcrApplication              : Started PcrApplication in 0.668 seconds (JVM running for 10853.743)
+2023-09-30 15:12:42.260  INFO 14148 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-09-30 15:12:42.262  INFO 14148 --- [restartedMain] com.spms.pcr.PcrApplication              : Info level log message
+2023-09-30 15:12:42.262 ERROR 14148 --- [restartedMain] com.spms.pcr.PcrApplication              : Error level log message

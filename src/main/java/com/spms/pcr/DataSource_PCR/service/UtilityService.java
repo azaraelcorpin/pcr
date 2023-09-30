@@ -164,6 +164,10 @@ public class UtilityService {
         return value!=null?value.toString().isEmpty()?null:(Long.valueOf(value.toString())):null;
     }
 
+    public Boolean toBoolean(Object value){
+        return value!=null?value.toString().isEmpty()?null:(Boolean.parseBoolean(value.toString())):null;
+    }    
+
     @Value("${APP_PCR_KEY}")
     private String key;
 
