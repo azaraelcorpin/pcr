@@ -38,7 +38,7 @@ public class UserService {
             Optional<User> optionalUser = userRepository.findByEmail(email);
             User user = optionalUser.orElse(null);
             if(user != null){
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("412", email+" already exist"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("409", email+" already exist"),
              HttpStatus.CONFLICT);
             }else{
                 user = new User();
@@ -71,5 +71,40 @@ public class UserService {
         }
     }
 
-  
+    @Transactional("PcrTransactionManager")
+    public ResponseEntity<Object> updateUser(@RequestBody Map<String,Object> params){
+        try{
+            String email_old = utilityService.getString("email_old", params);
+            String email = utilityService.getString("email", params);
+            String userName = utilityService.getString("userName", params);
+            String userType = utilityService.getString("userType", params);
+            int office_id = utilityService.toInteger(params.get("officeId").toString());
+            String privileges = utilityService.getString("privileges", params);
+            Optional<User> optionalUser = userRepository.findByEmail(email);
+            User user = optionalUser.orElse(null);
+            if(user != null){
+                if(!user.getEmail().equalsIgnoreCase(email_old))
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("409", email+" already exist"),
+             HttpStatus.CONFLICT);
+            }
+                user = new User();
+                user.setEmail(email);
+                user.setUsername(userName);
+                user.setUserType(userType);
+                user.setOfficeId(office_id);
+                user.setStatus(User.STATUS_ACTIVE);
+                user.setPrivileges(privileges);
+                userRepository.save(user);
+
+            if(!email.equalsIgnoreCase(email_old))
+                userRepository.deleteByEmail(email_old);
+            
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Success"),
+                HttpStatus.OK);
+            
+        }catch(Exception e){
+            log.error(e.getMessage());
+            return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }  
 }

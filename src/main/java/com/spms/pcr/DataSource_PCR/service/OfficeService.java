@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.spms.pcr.DataSource_PCR.model.Office;
-import com.spms.pcr.DataSource_PCR.model.User;
 import com.spms.pcr.DataSource_PCR.repository.OfficeRepository;
-import com.spms.pcr.DataSource_PCR.repository.UserRepository;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -57,6 +53,7 @@ public class OfficeService {
         }
     }
 
+    @Transactional("PcrTransactionManager")
     public ResponseEntity<Object> updateOffice(@RequestBody Map<String,Object> params){
         try{
             Long id = utilityService.toLong(params.get("id"));
@@ -66,10 +63,11 @@ public class OfficeService {
             Boolean is_sector = utilityService.toBoolean(params.get("is_sector"));
             Optional<Office> optionalOffice = officeRepository.findByCode(code);
             Office office = optionalOffice.orElse(null);
-            if(office != null && office.getId() != id){
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("412", code+" already exist"),
-             HttpStatus.CONFLICT);
-            }else{
+            if(office != null ){
+                if(office.getId() != id)
+                    return new ResponseEntity<Object>(utilityService.renderJsonResponse("412", code+" already exist"),
+                        HttpStatus.CONFLICT);
+            }
                 office = new Office();
                 office.setCode(code);
                 office.setDescription(description);
@@ -78,7 +76,7 @@ public class OfficeService {
                 officeRepository.save(office);
                 return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Accepted"),
                 HttpStatus.OK);
-            }
+            
         }catch(Exception e){
             log.error(e.getMessage());
             return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
