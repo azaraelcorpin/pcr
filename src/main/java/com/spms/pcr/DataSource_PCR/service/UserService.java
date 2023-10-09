@@ -33,12 +33,12 @@ public class UserService {
             String email = utilityService.getString("email", params);
             String userName = utilityService.getString("userName", params);
             String userType = utilityService.getString("userType", params);
-            int office_id = utilityService.toInteger(params.get("officeId").toString());
+            Long office_id = utilityService.toLong(params.get("officeId"));
             String privileges = utilityService.getString("privileges", params);
             Optional<User> optionalUser = userRepository.findByEmail(email);
             User user = optionalUser.orElse(null);
             if(user != null){
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("412", email+" already exist"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("409", email+" already exist"),
              HttpStatus.CONFLICT);
             }else{
                 user = new User();
@@ -49,7 +49,7 @@ public class UserService {
                 user.setStatus(User.STATUS_ACTIVE);
                 user.setPrivileges(privileges);
                 userRepository.save(user);
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("200", "Success"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("201", "New User Created"),
                 HttpStatus.OK);
             }
         }catch(Exception e){
@@ -61,7 +61,7 @@ public class UserService {
     @Transactional("PcrTransactionManager")
     public ResponseEntity<Object> getAllUser(){
         try{
-            List<User> list = userRepository.findAll();
+            List<Map<String,Object>> list = userRepository.getAll();
         return new ResponseEntity<Object>(utilityService.renderJsonResponse("200", "Success","USERS",list),
             HttpStatus.OK);
 
@@ -71,5 +71,58 @@ public class UserService {
         }
     }
 
-  
+    @Transactional("PcrTransactionManager")
+    public ResponseEntity<Object> updateUser(@RequestBody Map<String,Object> params){
+        try{
+            String email_old = utilityService.getString("email_old", params);
+            String email = utilityService.getString("email", params);
+            String userName = utilityService.getString("userName", params);
+            String userType = utilityService.getString("userType", params);
+            Long office_id = utilityService.toLong(params.get("officeId"));
+            String privileges = utilityService.getString("privileges", params);
+            String status = utilityService.getString("status", params);
+            Optional<User> optionalUser = userRepository.findByEmail(email);
+            User user = optionalUser.orElse(null);
+            if(user != null){
+                if(!user.getEmail().equalsIgnoreCase(email_old))
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("409", email+" already exist"),
+             HttpStatus.CONFLICT);
+            }
+                user = new User();
+                user.setEmail(email);
+                user.setUsername(userName);
+                user.setUserType(userType);
+                user.setOfficeId(office_id);
+                user.setStatus(status);
+                user.setPrivileges(privileges);
+                userRepository.save(user);
+
+            if(!email.equalsIgnoreCase(email_old))
+                userRepository.deleteByEmail(email_old);
+            
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Successfully updated"),
+                HttpStatus.OK);
+            
+        }catch(Exception e){
+            log.error(e.getMessage());
+            return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }  
+
+    @Transactional("PcrTransactionManager")
+    public ResponseEntity<Object> deleteUser(@RequestBody Map<String,Object> params){
+        try{
+            String email = utilityService.getString("email", params);
+
+                userRepository.deleteByEmail(email);
+            
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("204", "Successfully deleted"),
+                HttpStatus.OK);
+            
+        }catch(Exception e){
+            log.error(e.getMessage());
+            return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }  
+    
 }
