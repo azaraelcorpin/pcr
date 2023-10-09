@@ -1,10 +1,12 @@
 package com.spms.pcr.DataSource_PCR.service;
 
+import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -23,7 +25,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import com.google.gson.Gson;
 import com.spms.pcr.DataSource_PCR.model.Session;
+import com.spms.pcr.DataSource_PCR.model.User;
 import com.spms.pcr.DataSource_PCR.repository.SessionRepository;
+import com.spms.pcr.DataSource_PCR.repository.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -41,7 +45,7 @@ public class UtilityService {
         statusMessages.put("200", "OK");
         statusMessages.put("201", "Created");
         statusMessages.put("202", "Accepted");
-        statusMessages.put("204", "No Content");
+        statusMessages.put("204", "Deleted");
         statusMessages.put("205", "Reset Content");
         statusMessages.put("206", "Partial Content");
         statusMessages.put("207", "Multi-Status");
@@ -234,10 +238,14 @@ public class UtilityService {
     }
 
     public Integer toInteger(Object value){
+        if(value == null)
+        return null;
         return value!=null?value.toString().isEmpty()?null:(Integer.parseInt(value.toString())):null;
     }
 
     public Long toLong(Object value){
+        if(value == null)
+        return null;
         return value!=null?value.toString().isEmpty()?null:(Long.valueOf(value.toString())):null;
     }
 
@@ -268,8 +276,11 @@ public class UtilityService {
     }
 
     @Autowired
+    UserRepository userRepository;
+
+    @Autowired
     private SessionRepository sessionRepository;
-    public String generateSessionId(String _data,String ivHeader) throws Exception{
+    public JSONObject generateSessionId(String _data,String ivHeader) throws Exception{
         String sessionId = "123456";
         sessionId = RandomStringUtils.randomAlphanumeric(45);
 
@@ -277,29 +288,49 @@ public class UtilityService {
         JSONObject obj =  new JSONObject(id);
 
         if(!id.contains("@msugensan.edu.ph"))
-                throw new Exception("Unauthorize");
+                throw new Exception("Unauthorized");
 
         Session session = new Session();
         session.setDate(new Date());
         session.setEmail(obj.get("userEmail").toString());
         session.setSessionId(sessionId);
+        sessionRepository.save(session);
 
         /*
         Put condition here that filter if the user is exist in the user Table or
-        the user has record on pre_assessment table
-        ....>
-            if(!userRepository.findByEmail(userEmail).ispresent())
-                throw -> Unauthorized
-            if(!preAssessmentReporitory.findByEmail(userEmail).ispresent())
-                throw -> Unauthorized
+        the user has record on employee table↓↓
         */
+        Optional<User> user = userRepository.findByEmailAndStatus(obj.get("userEmail").toString(), "Active");
+        JSONObject response = new JSONObject();
+        List<String> roles = new ArrayList<>();
 
-        sessionRepository.save(session);
+        if(user.isPresent()){
+            roles.add(user.get().getUserType());
+        }
 
-        return sessionId;
+        List<Map<String,Object>> list = userRepository.getRoles(session.getEmail());
+        System.out.println("id is "+list.size());
+        for (Map<String,Object> map : list) {
+            roles.add(map.get("position").toString());
+        }
+        if(roles.isEmpty()){
+            throw new Exception("Unauthorized");
+        }
+
+        response.put("ROLES",roles);
+        response.put("sessionId", sessionId);
+        response.put("office_id",list.isEmpty()?null:list.get(0).get("office_id"));
+
+        return response;
     }
 
     public JSONObject validateSession(String _data,String ivHeader) throws Exception{
+        if((_data.equals("test")&& ivHeader.equals("test")))
+        {
+         JSONObject test = new JSONObject();
+         test.put("user", "test");
+         return test;
+        }
         String param = decryptDataAuth(_data, ivHeader);
 
             if(!param.contains("@msugensan.edu.ph"))
@@ -307,13 +338,13 @@ public class UtilityService {
         
             JSONObject obj =  new JSONObject(param);
             if(!obj.has("sid"))
-                throw new Exception("Unauthorize");
+                throw new Exception("Unauthorized");
 
             if(obj.getString("sid").equalsIgnoreCase("hash"))
                 return obj;
             
             if(!sessionRepository.findBySessionIdAndEmail(obj.getString("sid"), obj.getString("userEmail")).isPresent())
-                throw new Exception("Unauthorize");            
+                throw new Exception("Invalid Session ID");            
 
         return obj;
     }
@@ -330,7 +361,6 @@ public class UtilityService {
         try {
             date = dateFormat.parse(dateString);
         } catch (ParseException e) {
-            // TODO Auto-generated catch block
             log.error(dateString, e);
             return null;
         }

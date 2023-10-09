@@ -44,7 +44,7 @@ public class UserController {
  
         }catch(Exception e){
             System.out.println(e);
-           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", e.getMessage()),
                 HttpStatus.UNAUTHORIZED);
         }
         return userService.getAllUser();
@@ -54,7 +54,7 @@ public class UserController {
     @ApiOperation(value = "Get user's session Id")     
     public ResponseEntity<Object> getSessionId(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader){
         //insert here for authentication from request header! value=authorization.
-        String param = "";
+        JSONObject param = new JSONObject();
         try{
             String id = utilityService.decryptDataAuth(authorization, ivHeader);
             JSONObject obj =  new JSONObject(id);
@@ -63,7 +63,7 @@ public class UserController {
              log.info("getSessionId by:"+obj.toString());
 
              System.out.println(param);
-             return new ResponseEntity<Object>(utilityService.renderJsonResponse("200","Auth","sessionId",param),HttpStatus.OK);
+             return new ResponseEntity<Object>(utilityService.renderJsonResponse("200","Auth","session",param),HttpStatus.OK);
         }catch(Exception e){
             System.out.println(e);
            return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
@@ -87,4 +87,39 @@ public class UserController {
         }
         return userService.newUser(params);
     }
+
+    @PostMapping(path = "delete")
+    @ApiOperation(value = "delete User")     
+    public ResponseEntity<Object> deleteUser(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader, 
+                                        @ApiParam(value = "email", required = true) @RequestBody Map<String, Object> params){
+        //insert here for authentication from request header! value=authorization.
+        try{
+             JSONObject userJsonObject =  utilityService.validateSession(authorization, ivHeader);
+             log.info("Delete User by:"+userJsonObject.toString());
+             
+        }catch(Exception e){
+            System.out.println(e);
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+                HttpStatus.UNAUTHORIZED);
+        }
+        return userService.deleteUser(params);
+    }
+
+    @PostMapping(path = "update")
+    @ApiOperation(value = "update User")     
+    public ResponseEntity<Object> updateUser(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader, 
+                                        @ApiParam(value = "email<br>userName<br>userType<br>officeId<br>privileges<br>email_old<br>status", required = true) @RequestBody Map<String, Object> params){
+        //insert here for authentication from request header! value=authorization.
+        try{
+             JSONObject userJsonObject =  utilityService.validateSession(authorization, ivHeader);
+             log.info("Update User by:"+userJsonObject.toString());
+             
+        }catch(Exception e){
+            System.out.println(e);
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+                HttpStatus.UNAUTHORIZED);
+        }
+        return userService.updateUser(params);
+    }
+    
 }

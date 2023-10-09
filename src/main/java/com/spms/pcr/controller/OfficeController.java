@@ -44,7 +44,7 @@ public class OfficeController {
  
         }catch(Exception e){
             System.out.println(e);
-           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", e.getMessage()),
                 HttpStatus.UNAUTHORIZED);
         }
         return officeService.getAllOffice();

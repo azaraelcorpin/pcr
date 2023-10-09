@@ -91,7 +91,7 @@ public class EmployeeService {
                 employee.setPosition(position);
                 employee.setStatus(status);
                 employeeRepository.save(employee);
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Updated"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Successfully updated"),
                 HttpStatus.OK);
             
         }catch(Exception e){

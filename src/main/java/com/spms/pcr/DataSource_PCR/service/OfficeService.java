@@ -44,7 +44,7 @@ public class OfficeService {
                 office.setIsSector(is_sector);
                 office.setTopOffice(top_office_id);
                 officeRepository.save(office);
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("201", "Created"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("201", "New Office Created"),
                 HttpStatus.OK);
             }
         }catch(Exception e){
@@ -74,7 +74,7 @@ public class OfficeService {
                 office.setIsSector(is_sector);
                 office.setTopOffice(top_office_id);
                 officeRepository.save(office);
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Accepted"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Successfully updated"),
                 HttpStatus.OK);
             
         }catch(Exception e){

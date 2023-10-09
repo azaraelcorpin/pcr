@@ -97,7 +97,7 @@ public class PreApproveEmpService {
                 employee.setStatus(status);
                 employee.setEmployeeId(empId);
                 preApproveEmpRepository.save(employee);
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Updated"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("202", "Successfully updated"),
                 HttpStatus.OK);
             
         }catch(Exception e){
