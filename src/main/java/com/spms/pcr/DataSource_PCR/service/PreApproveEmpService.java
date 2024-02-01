@@ -43,7 +43,7 @@ public class PreApproveEmpService {
             Optional<PreApproveEmp> optionalPreApproveEmp = preApproveEmpRepository.findByEmail(email);
             PreApproveEmp preApproveEmp = optionalPreApproveEmp.orElse(null);
             if(preApproveEmp != null){
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("412", email+" already exist"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("409", email+" already exist"),
              HttpStatus.CONFLICT);
             }
                 preApproveEmp = new PreApproveEmp();
@@ -83,7 +83,7 @@ public class PreApproveEmpService {
             PreApproveEmp employee = optionalEmployee.orElse(null);
             if(employee != null){
                 if(employee.getId() != id)
-                return new ResponseEntity<Object>(utilityService.renderJsonResponse("412", email+" already exist"),
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("409", email+" already exist"),
              HttpStatus.CONFLICT);
             }
                 employee = new PreApproveEmp();
@@ -118,6 +118,22 @@ public class PreApproveEmpService {
             return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @Transactional("PcrTransactionManager")
+    public ResponseEntity<Object> deleteEmployee(@RequestBody Map<String,Object> params){
+        try{
+            Long id = utilityService.toLong(params.get("id"));
+
+                preApproveEmpRepository.deleteById(id);
+            
+                return new ResponseEntity<Object>(utilityService.renderJsonResponse("204", "Successfully deleted"),
+                HttpStatus.OK);
+            
+        }catch(Exception e){
+            log.error(e.getMessage());
+            return new ResponseEntity<Object>(utilityService.renderJsonResponse("500", e.getMessage()),HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    } 
 
   
 }

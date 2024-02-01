@@ -10,12 +10,15 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.spms.pcr.DataSource_PCR.model.User;
 
+@Repository
 public interface UserRepository extends JpaRepository<User, String> {
 
     Optional<User> findByEmail(String email);
+    Optional<User> findToByOfficeId(Long officeId);
     Optional<User> findByEmailAndStatus(String email, String status);
     List<User> findAll();
     void deleteByEmail(String email);
@@ -26,12 +29,6 @@ public interface UserRepository extends JpaRepository<User, String> {
     List<Map<String,Object>> getAll();
 
     @QueryHints(@QueryHint(name =  org.hibernate.annotations.QueryHints.CACHEABLE, value = "true"))
-    @Query(nativeQuery = true, value = "SELECT 'OFFICE_HEAD' AS position , office_id " +
-           "FROM Employee e " +
-           "WHERE e.email = :email AND e.position = 'OFFICE_HEAD' AND e.status = 'active' " +
-           "UNION " +
-           "SELECT 'INDIVIDUAL' AS position , office_id " +
-           "FROM Employee e " +
-           "WHERE e.email = :email")
+    @Query(nativeQuery = true, value = "SELECT o.office_id, o.roles FROM office_employee o, employee e WHERE e.email = :email")
     List<Map<String,Object>> getRoles(@Param("email") String email);
 }

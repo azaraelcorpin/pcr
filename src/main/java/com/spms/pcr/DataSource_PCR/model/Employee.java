@@ -24,15 +24,4 @@ public class Employee {
     @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(name = "office_id", nullable = true)
-    private Long officeId;
-
-    @Column(name = "position", nullable = false)
-    private String position;
-
-    @Column(name = "pcr_type", nullable = false)
-    private String pcrType;
-
-    @Column(name = "status", nullable = false)
-    private String status;  
 }

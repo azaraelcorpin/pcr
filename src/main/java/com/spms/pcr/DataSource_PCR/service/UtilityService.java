@@ -293,8 +293,7 @@ public class UtilityService {
         Session session = new Session();
         session.setDate(new Date());
         session.setEmail(obj.get("userEmail").toString());
-        session.setSessionId(sessionId);
-        sessionRepository.save(session);
+        session.setSessionId(sessionId);        
 
         /*
         Put condition here that filter if the user is exist in the user Table or
@@ -303,15 +302,28 @@ public class UtilityService {
         Optional<User> user = userRepository.findByEmailAndStatus(obj.get("userEmail").toString(), "Active");
         JSONObject response = new JSONObject();
         List<String> roles = new ArrayList<>();
+        JSONArray officesAndRoles = new JSONArray();
 
         if(user.isPresent()){
             roles.add(user.get().getUserType());
-        }
+            if(user.get().getOfficeId() != null){
+                JSONObject o = new JSONObject();
+                o.put("office_id", user.get().getOfficeId());
+                o.put("role", user.get().getUserType());
+                officesAndRoles.put(o);
+            }
+        }  
 
         List<Map<String,Object>> list = userRepository.getRoles(session.getEmail());
         System.out.println("id is "+list.size());
         for (Map<String,Object> map : list) {
-            roles.add(map.get("position").toString());
+            roles.add(map.get("roles").toString());
+            if(map.get("roles").toString().equalsIgnoreCase("OFFICE_HEAD")){
+                JSONObject o = new JSONObject();
+                    o.put("office_id", map.get("office_id"));
+                    o.put("role", map.get("roles").toString());
+                    officesAndRoles.put(o);
+            }   
         }
         if(roles.isEmpty()){
             throw new Exception("Unauthorized");
@@ -319,8 +331,9 @@ public class UtilityService {
 
         response.put("ROLES",roles);
         response.put("sessionId", sessionId);
-        response.put("office_id",list.isEmpty()?null:list.get(0).get("office_id"));
+        response.put("officesAndRoles",officesAndRoles.isEmpty()?null:officesAndRoles);
 
+        sessionRepository.save(session);
         return response;
     }
 
@@ -361,6 +374,25 @@ public class UtilityService {
         try {
             date = dateFormat.parse(dateString);
         } catch (ParseException e) {
+            log.error(dateString, e);
+            return null;
+        }
+        return date;
+    }
+
+    public Date getDate(String key, Map<String, Object> param){
+        Object value = param.get(key);
+        if(value == null)
+            return null;
+        String dateString = value.toString();
+        if(dateString.isEmpty())
+            return null;
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        Date date;
+        try {
+            date = dateFormat.parse(dateString);
+        } catch (ParseException e) {        
             log.error(dateString, e);
             return null;
         }

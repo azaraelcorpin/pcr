@@ -53,7 +53,7 @@ public class OfficeController {
     @PostMapping(path = "new")
     @ApiOperation(value = "save new Office")     
     public ResponseEntity<Object> newOffice(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader, 
-                                        @ApiParam(value = "code<br>Description<br>top_office<br>is_sector", required = true) @RequestBody Map<String, Object> params){
+                                        @ApiParam(value = "code<br>description<br>topOfficeId<br>is_sector", required = true) @RequestBody Map<String, Object> params){
         //insert here for authentication from request header! value=authorization.
         try{
              JSONObject userJsonObject =  utilityService.validateSession(authorization, ivHeader);
@@ -83,4 +83,39 @@ public class OfficeController {
         }
         return officeService.updateOffice(params);
     }    
+
+    @PostMapping(path = "delete")
+    @ApiOperation(value = "delete Office")     
+    public ResponseEntity<Object> deleteOffice(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader, 
+                                        @ApiParam(value = "id", required = true) @RequestBody Map<String, Object> params){
+        //insert here for authentication from request header! value=authorization.
+        try{
+             JSONObject userJsonObject =  utilityService.validateSession(authorization, ivHeader);
+             log.info("Delete Office by:"+userJsonObject.toString());
+             
+        }catch(Exception e){
+            System.out.println(e);
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+                HttpStatus.UNAUTHORIZED);
+        }
+        return officeService.deleteOffice(params);
+    }
+
+    @PostMapping(path = "getOfficeData")
+    @ApiOperation(value = "get Office Data")     
+    public ResponseEntity<Object> getOfficeData(@RequestHeader("Authorization") String authorization,@RequestHeader("X-IV") String ivHeader, 
+                                        @ApiParam(value = "id", required = true) @RequestBody Map<String, Object> params){
+        //insert here for authentication from request header! value=authorization.
+        try{
+             JSONObject userJsonObject =  utilityService.validateSession(authorization, ivHeader);
+             log.info("Get Office data by:"+userJsonObject.toString());
+             
+        }catch(Exception e){
+            System.out.println(e);
+           return new ResponseEntity<Object>(utilityService.renderJsonResponse("401", "Unauthorized"),
+                HttpStatus.UNAUTHORIZED);
+        }
+        return officeService.getOfficeData(params);
+    }
+
 }

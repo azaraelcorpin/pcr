@@ -188,7 +188,7 @@ log "$MAVEN_PROJECTBASEDIR"
 # This allows using the maven wrapper in projects that prohibit checking in binary data.
 ##########################################################################################
 wrapperJarPath="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar"
-if [ -r "$wrapperJarPath" ]; then
+if [ -r "$wrapperJarPath" ]; then 
     log "Found $wrapperJarPath"
 else
     log "Couldn't find $wrapperJarPath, downloading it ..."
